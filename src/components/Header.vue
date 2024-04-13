@@ -1,13 +1,19 @@
 <template>
-    <!-- Header component -->
     <header>
-        <!-- Navigation -->
         <nav>
-            <ul>
-                <li><router-link to="/">Home</router-link></li>
-                <li><router-link to="/about">About</router-link></li>
-                <li><router-link to="/contact">Contact</router-link></li>
-            </ul>
+           <div class="flex flex-wrap items-centefr justify-between mx-auto p-8">
+                <router-link to="/" class="flex items-center">
+                    <img src="./assets/bitcoinsv.svg" class=" " alt="Vue logo">
+                </router-link>
+
+             <div class="menu hidden md:block md:w-auto" id="navbar"> 
+                <ul class="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
+                    <li><router-link to="/">Home</router-link></li>
+                    <li><router-link to="/about">About</router-link></li>
+                    <li><router-link to="/contact">Contact</router-link></li>
+                </ul>
+              </div>
+            </div>
         </nav>
     </header>
 </template>
@@ -19,25 +25,5 @@ export default {
 </script>
 
 <style scoped>
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-}
 
-.logo {
-    height: 50px;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-nav li {
-    margin: 0 10px;
-}
 </style>
