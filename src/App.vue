@@ -2,17 +2,19 @@
 import HelloWorld from './components/HelloWorld.vue'
 import Header from './components/Header.vue';
 import WelcomeHeader from './components/WelcomeHeader.vue';
+import BitcoinTracker from './components/BitcoinTracker.vue';
 </script>
 
 <template>
   <div>
 
   </div>
-  <Header />
-  <HelloWorld msg="BITCOIN PRICE" />
-  <WelcomeHeader />
+  <Header/>
+  <HelloWorld/>
+  <WelcomeHeader/>
+  <BitcoinTracker/>
 </template>
 
 <style scoped>
 
-</style>
+</style>./components/BitcoinTracker.vue
