@@ -3,7 +3,7 @@
         <nav>
            <div class="flex flex-wrap items-centefr justify-between mx-auto p-8">
                 <router-link to="/" class="flex items-center">
-                    <img src="./assets/bitcoinsv.svg" class=" " alt="Vue logo">
+                    <img src="/bitcoinsv.svg" class=" " alt="Vue logo">
                 </router-link>
 
              <div class="menu hidden md:block md:w-auto" id="navbar"> 

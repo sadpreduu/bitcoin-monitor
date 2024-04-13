@@ -5,7 +5,7 @@
             <div>
                 <img class="h-15 w-10 inline-block container mx-auto self-center align-middle" src="/public/bitcoinsv.svg" alt="bitcoin logo">
                 <span
-                    class="text-transparent bg-clip-text bg-gradient-to-r from-orange-800 via-white-500 to-yellow-600 inline-block">
+                    class="px-2 text-transparent bg-clip-text bg-gradient-to-r from-orange-800 via-white-500 to-yellow-600 inline-block">
                     Bitcoin Price
                 </span>
             </div>
