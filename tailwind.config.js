@@ -12,6 +12,16 @@ module.exports = {
         'ptserif': ['PT Serif','serif'],
         'oswald': ['Oswald','sans-serif'],
         'roboto': ['Roboto','sans-serif'],
+      },
+      keyframes: {
+        'border-spin':{
+          '100%': {
+            transform: 'rotate(360deg)'
+          },
+        },
+      },
+      animation: {
+        'border-spin': 'border-spin 1s linear infinite',
       }
      },
    },
