@@ -8,6 +8,10 @@ module.exports = {
       fontFamily: {
         'poppins': ['Poppins','sans-serif'],
         'raleway': ['Raleway','sans-serif'],
+        'playfair': ['Playfair Display','serif'],
+        'ptserif': ['PT Serif','serif'],
+        'oswald': ['Oswald','sans-serif'],
+        'roboto': ['Roboto','sans-serif'],
       }
      },
    },
