@@ -2,8 +2,8 @@
     <header>
         <nav>
            <div class="flex flex-wrap items-centefr justify-between mx-auto p-8">
-                <router-link to="/" class="flex items-center" src="/cat-coin.png">
-                    <img  class="h-30 w-30" alt="LOGO">
+                <router-link to="/" class="flex items-center">
+                    <img  src="./cat-coin.png" class="h-30 w-30" alt="LOGO">
                 </router-link>
 
              <div class="menu hidden md:block md:w-auto" id="navbar"> 

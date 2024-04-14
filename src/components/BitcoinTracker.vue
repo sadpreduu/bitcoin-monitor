@@ -5,13 +5,13 @@
             <div>
                 <img class="h-15 w-10 inline-block container mx-auto self-center align-middle" src="/public/bitcoinsv.svg" alt="bitcoin logo">
                 <span
-                    class="px-2 text-transparent bg-clip-text bg-gradient-to-r from-orange-800 via-white-500 to-yellow-600 inline-block">
+                    class="fonr-raleway px-2 text-transparent bg-clip-text bg-gradient-to-r from-orange-800 via-white-500 to-yellow-600 inline-block">
                     Bitcoin Price
                 </span>
             </div>
 
-            <div class="self-center px-1 py-1 w-full sm:w-fit bg-gradient-to-br from-orange-800 via-white-500 to-yellow-600 text-white mt-3"> 
-            <h2 class="font-raleway block bg-[#333131] px-5 py-3 self-center">{{ bitcoinPrice }} USD </h2>
+            <div class="self-center px-0.5 py-0.5 w-full sm:w-fit bg-gradient-to-br from-orange-800 via-white-500 to-yellow-600 text-white mt-3"> 
+            <h2 class="font-raleway block bg-[#333131] px-7 py-5 self-center">{{ bitcoinPrice }} USD </h2>
             </div>
         </div>
     </section>
