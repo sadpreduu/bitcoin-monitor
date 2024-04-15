@@ -1,50 +1,66 @@
 <template>
   <section>
     <div class="card-wrapper flex flex-col items-center justify-center p-4">
-      <div>
-        <h1 class="font-extrabold uppercase p-4 text-xl">Bitcoin Price History</h1>
-        <button @click="fetchBitcoinPrice(7)">Last Week</button>
-        <button @click="fetchBitcoinPrice(15)">Past 15 days</button>
-        <button @click="fetchBitcoinPrice(30)">Past Mounth</button>
-        <button @click="fetchBitcoinPrice(180)">Past Six Mounths</button>
-        <div v-if="bitcoinPriceHistory.length > 0" class="card-wrapper flex flex-col items-center justify-center p-4">
-          <ul>
-            <li v-for="entry in bitcoinPriceHistory" :key="entry.date">
-              {{ entry.date }}: ${{ entry.price }}
-            </li>
-          </ul>
+      <div class="search-container">
+        <div class="search-card p-4">
+          <input type="date" v-model="searchDate" class="input-date">
+          <button @click="fetchBitcoinPriceByDate" class="btn-search">Search Bitcoin Price</button>
         </div>
+      </div>
+      <div class="result-container mt-4 border">
+        <p v-if="searchResult" class="text-xl font-bold text-black">Bitcoin Price on {{ searchDate }}: ${{ searchResult }}</p>
       </div>
     </div>
   </section>
 </template>
 
-  
-  <script>
-  import axios from 'axios';
-  
-  export default {
-    name: 'Tracker',
-    data() {
-      return {
-        bitcoinPriceHistory: []
-      };
-    },
-    methods: {
-      async fetchBitcoinPrice(days) {
-        try {
-          const response = await axios.get(`https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=${days}`);
-          this.bitcoinPriceHistory = response.data.prices.map(price => {
-            return {
-              date: new Date(price[0]).toLocaleDateString('en-US'),
-              price: price[1]
-            };
-          });
-        } catch (error) {
-          console.error('Error fetching Bitcoin price:', error);
-        }
+<script>
+import axios from 'axios';
+
+export default {
+  name: 'Tracker',
+  data() {
+    return {
+      searchDate: '',
+      searchResult: null
+    };
+  },
+  methods: {
+    async fetchBitcoinPriceByDate() {
+      try {
+        const selectedDate = new Date(this.searchDate).getTime() / 1000;
+        const response = await axios.get(`https://api.coingecko.com/api/v3/coins/bitcoin/history?date=${selectedDate}&localization=false`);
+        const bitcoinPrice = response.data.market_data.current_price.usd;
+        this.searchResult = bitcoinPrice;
+      } catch (error) {
+        console.error('Error fetching Bitcoin price by date:', error);
       }
     }
   }
-  </script>
-  
+}
+</script>
+
+<style>
+.input-date {
+  @apply p-2;
+  border: 1px solid #ccc;
+  border-radius: 0.375rem;
+}
+
+.search-container {
+  @apply mt-4 flex items-center;
+}
+
+.search-card {
+  @apply border-2 border-gray-200 rounded p-4;
+}
+
+.btn-search {
+  @apply bg-gradient-to-r from-purple-600 to-pink-600 text-white border-none px-4 py-2 ml-2 rounded;
+  cursor: pointer;
+}
+
+.result-container {
+  @apply mt-4;
+}
+</style>

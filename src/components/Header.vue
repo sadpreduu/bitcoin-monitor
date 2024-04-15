@@ -1,7 +1,7 @@
 <template>
     <header>
         <nav> 
-           <div class="flex flex-wrap items-centefr justify-between mx-auto p-8">  
+           <div class="flex flex-wrap items-centefr justify-between mx-auto p-8 text-black">  
             <img src="/icons8-cat-eyes-50.png" class="rounded-md h-35 w-35 px-0.1 py-0.1 sm:h-10 sm:w-10 bg-gradient-to-r from-violet-800 via-white-500 to-violet-600" alt="LOGO">
             <span>CAT COIN</span> 
             <div class="menu hidden md:block md:w-auto" id="navbar"> 

@@ -1,9 +1,10 @@
 <template>
-    <div>
-        <h1 class="text-white mb-4 text-5xl sm:text-5xl lg:text-7xl font-extrabold px-4 py-4">{{ msg }},
-            <h1 class="inline-block">
+    <div class="flex flex-col items-center justify-center">
+        <h1 class=" text-black mb-4 text-5xl sm:text-5xl lg:text-7xl font-extrabold px-4 py-4">{{ msg }},
+            <h1 class="inline-block text-transparent bg-clip-text bg-gradient-to-r from-violet-500 via-fuchsya-500 to-violet-500">
                 it is {{ hour }}:{{ minute }}
             </h1>
+
 
         </h1>
     </div>

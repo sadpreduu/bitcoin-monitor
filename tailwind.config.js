@@ -12,6 +12,7 @@ module.exports = {
         'ptserif': ['PT Serif','serif'],
         'oswald': ['Oswald','sans-serif'],
         'roboto': ['Roboto','sans-serif'],
+        'plex': ['IBM Plex Sans','sans-serif'],
       },
       keyframes: {
         'border-spin':{
