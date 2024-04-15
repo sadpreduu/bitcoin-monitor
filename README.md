@@ -10,7 +10,7 @@ npm run dev
 Published website for display:
 
 ```bash
-[CATCOIN](https://sadpreduu.github.io/bitcoin-monitor/)
+https://sadpreduu.github.io/bitcoin-monitor/
 ```
 
 
