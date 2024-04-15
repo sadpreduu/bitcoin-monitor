@@ -1,23 +1,24 @@
 <template>
-    <section>
-      <div class="card-wrapper flex flex-col items-center justify-center p-4">
-        <div>
-          <h1 class="font-extrabold uppercase p-4 text-xl">Bitcoin Price History</h1>
-          <button @click="fetchBitcoinPrice(7)">Últimos 7 dias</button>
-          <button @click="fetchBitcoinPrice(15)">Últimos 15 dias</button>
-          <button @click="fetchBitcoinPrice(30)">Último mês</button>
-          <button @click="fetchBitcoinPrice(180)">Últimos 6 meses</button>
-          <div v-if="bitcoinPriceHistory.length > 0">
-        <ul>
-          <li v-for="entry in bitcoinPriceHistory" :key="entry.date">
-            {{ entry.date }}: ${{ entry.price }}
-          </li>
-        </ul>
-      </div>
+  <section>
+    <div class="card-wrapper flex flex-col items-center justify-center p-4">
+      <div>
+        <h1 class="font-extrabold uppercase p-4 text-xl">Bitcoin Price History</h1>
+        <button @click="fetchBitcoinPrice(7)">Last Week</button>
+        <button @click="fetchBitcoinPrice(15)">Past 15 days</button>
+        <button @click="fetchBitcoinPrice(30)">Past Mounth</button>
+        <button @click="fetchBitcoinPrice(180)">Past Six Mounths</button>
+        <div v-if="bitcoinPriceHistory.length > 0" class="card-wrapper flex flex-col items-center justify-center p-4">
+          <ul>
+            <li v-for="entry in bitcoinPriceHistory" :key="entry.date">
+              {{ entry.date }}: ${{ entry.price }}
+            </li>
+          </ul>
         </div>
       </div>
-    </section>
-  </template>
+    </div>
+  </section>
+</template>
+
   
   <script>
   import axios from 'axios';
