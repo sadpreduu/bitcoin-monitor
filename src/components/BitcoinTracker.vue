@@ -1,15 +1,16 @@
 <template>
   <section class="flex flex-col items-center justify-center">
-    <div class="mb-4 text-4xl sm:text-5xl lg:text-6xl px-4 py-4 rounded-md p-4">
+
+    <div class=" shadow-md mb-4 text-4xl sm:text-5xl lg:text-6xl px-4 py-4 border-2 border-gray-200 rounded p-4 self-center text-center inset-0 ">
       <div class="flex items-center">
         <img class="h-10 w-auto mr-2" src="/icons8-bitcoin.svg" alt="bitcoin logo">
-        <h1 class="font-bold font-plex text-gray-700 content-flex align-middle">
+        <h2 class="font-plex text-gray-700 content-flex align-middle">
           Bitcoin Price <a class="text-sm opacity-45">(BTC)</a>
-        </h1>
+        </h2>
       </div>
 
-      <div class="shadow-2xl rounded-md self-center px-1 py-1 w-full bg-[#effaff] mt-5 border">
-        <h2 class="flex font-plex text-violet-500 rounded-md bg-clip-padding bg-[#effaff] px-7 py-5 w-full self-center text-center inset-0 justify-center items-center">
+      <div class="rounded-md self-center px-1 py-1 w-full bg-[#e1f5f6] mt-5 border">
+        <h2 class="flex font-plex font-bold text-violet-500 rounded-md bg-clip-padding bg-[#e1f5f6] px-7 py-5 w-full self-center text-center inset-0 justify-center items-center">
           USD {{ formattedBitcoinPrice }}
         </h2>
         <h2 class="text-center text-xl text-black mt-2">
@@ -19,6 +20,7 @@
         </h2>
       </div>
     </div>
+    
   </section>
 </template>
 
