@@ -1,6 +1,6 @@
 <template>
   <section class="flex flex-col items-center justify-center">
-    <div class="mb-4 text-4xl sm:text-5xl lg:text-6xl px-4 py-4 rounded-md p-4 border border-violet-500 outline-black outline-offset-4">
+    <div class="mb-4 text-4xl sm:text-5xl lg:text-6xl px-4 py-4 rounded-md p-4">
       <div class="flex items-center">
         <img class="h-10 w-auto mr-2" src="/icons8-bitcoin.svg" alt="bitcoin logo">
         <h1 class="font-bold font-plex text-gray-700 content-flex align-middle">
@@ -8,13 +8,13 @@
         </h1>
       </div>
 
-      <div class="shadow-2xl rounded-md self-center px-1 py-1 w-full bg-white mt-5">
-        <h2 class="flex font-plex text-violet-500 rounded-md bg-clip-padding bg-white px-7 py-5 w-full self-center text-center inset-0 justify-center items-center">
+      <div class="shadow-2xl rounded-md self-center px-1 py-1 w-full bg-[#effaff] mt-5 border">
+        <h2 class="flex font-plex text-violet-500 rounded-md bg-clip-padding bg-[#effaff] px-7 py-5 w-full self-center text-center inset-0 justify-center items-center">
           USD {{ formattedBitcoinPrice }}
         </h2>
         <h2 class="text-center text-xl text-black mt-2">
-          <span v-if="priceChangePercentage > 0 && priceChangePercentage < 100" class="text-green-500">↑ {{ priceChangePercentage }}%</span>
-          <span v-else-if="priceChangePercentage < 0 && priceChangePercentage > -100" class="text-red-500">↓ {{ priceChangePercentage }}%</span> 
+          <span v-if="priceChangePercentage > 0 && priceChangePercentage < 100" class="text-green-500">Positive Variation ↑ {{ priceChangePercentage }}%</span>
+          <span v-else-if="priceChangePercentage < 0 && priceChangePercentage > -100" class="text-red-500">Negative Variation ↓ {{ priceChangePercentage }}%</span> 
           <span v-else class="text-gray-500">No Variation</span>
         </h2>
       </div>
