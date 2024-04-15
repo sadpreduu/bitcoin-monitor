@@ -1,7 +1,18 @@
 # CAT COIN, Bitcoin Price Tracker (Dacxi Frontend Technical Test)
 
+Clone the repo and run for your self
+```bash
+git clone https://github.com/sadpreduu/bitcoin-monitor.git
+cd bitcoin-monitor
+npm i 
+npm run dev
 ```
+Published website for display:
+
+```bash
+git clone https://github.com/sadpreduu/bitcoin-monitor.git
 ```
+
 
 This is my attempt at building a Vue.js frontend for a Dacxi Frontend Technical Test. The test was to build a Vue.js frontend for a Bitcoin price tracker. The test was designed to be a simple, minimalist, and responsive design. 
 
