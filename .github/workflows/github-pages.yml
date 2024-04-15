@@ -28,5 +28,4 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@4.1.6
         with:
           branch: gh-pages
-          folder: dist  # Substitua pelo diretório de construção do seu projeto, se for diferente
           token: ${{ secrets.GITHUB_TOKEN }}
