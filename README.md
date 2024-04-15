@@ -1,5 +1,8 @@
 # CAT COIN, Bitcoin Price Tracker (Dacxi Frontend Technical Test)
 
+```
+```
+
 This is my attempt at building a Vue.js frontend for a Dacxi Frontend Technical Test. The test was to build a Vue.js frontend for a Bitcoin price tracker. The test was designed to be a simple, minimalist, and responsive design. 
 
 As requirements I should have used the following technologies:
@@ -146,3 +149,41 @@ The `BitcoinPrice` component consists of the following elements:
 #### Usage
 
 The `BitcoinPrice` component can be integrated into Vue.js applications to provide users with a convenient way to explore historical Bitcoin price data. It enhances user engagement and facilitates better understanding of Bitcoin's price trends over time.
+
+### GraphHistory Component
+
+<mark style="background-color: #FDE68A; color: #000000;">⚠️ Please note: This component did not function as intended due to issues with API requests that I was unable to resolve in time to complete the project.</mark>
+
+The `GraphHistory` component is a Vue.js component designed to display historical price data of Bitcoin (BTC) using an interactive chart. It utilizes Vue.js for data management and Axios for making HTTP requests to the CoinAPI.
+
+#### Purpose
+
+The purpose of the `GraphHistory` component is to visualize the historical price movement of Bitcoin over a specified period. It offers users insights into Bitcoin's price trends and enables them to analyze past performance.
+
+#### Features
+
+- **Price Data Visualization:** The component fetches historical Bitcoin price data from the CoinAPI and displays it using an interactive chart.
+
+- **Dynamic Time Range Selection:** Users can choose between different time ranges (last 7 days, 15 days, or 30 days) to view Bitcoin price data for specific periods.
+
+#### Component Structure
+
+The `GraphHistory` component comprises the following elements:
+
+- **Template:** The template defines the component's UI structure using HTML with Tailwind CSS classes for styling. It includes elements for the chart display and buttons for selecting the time range.
+
+- **Script:** The script section contains the JavaScript logic for the component. It defines the component's data (`variation` and `chartOptions`) and methods (`fetchBitcoinPriceData`) for fetching and rendering Bitcoin price data.
+
+- **Style:** The style section contains scoped CSS styles to customize the appearance of the component elements, including buttons and containers.
+
+#### Data Handling and HTTP Requests
+
+- The `fetchBitcoinPriceData` method makes an asynchronous HTTP request to the CoinAPI to fetch historical Bitcoin price data for the specified time range.
+
+- It calculates the start and end dates based on the selected time range and constructs the API request accordingly.
+
+- Upon receiving a successful response, the method extracts the Bitcoin price data and updates the chart with the retrieved information.
+
+#### Usage
+
+The `GraphHistory` component can be integrated into Vue.js applications to provide users with a visual representation of Bitcoin's historical price data. Although it encountered issues with API requests, it serves as a foundation for future improvements and enhancements in displaying Bitcoin price trends.
