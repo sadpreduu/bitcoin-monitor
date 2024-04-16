@@ -40,7 +40,7 @@ As requirements I should have used the following technologies:
 
 ## Final Result (Browser) Screen Shot of Dev Biuld
 
-![Cat Coin]('./catcoin-sc.png')
+![Cat Coin](./public/catcoin-sc.png)
 
 
 <br>
